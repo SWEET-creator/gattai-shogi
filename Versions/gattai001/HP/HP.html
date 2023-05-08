@@ -1,0 +1,122 @@
+<<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>loading</title>
+
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'oef0vxd',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+<style>
+  .slide{
+      animation:  animationZoom1 2.5s;
+  }
+  .completed {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #loading-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #CCC5C1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  z-index: 9999;
+  }
+
+  @keyframes animationZoom1 {
+    0% {
+      transform: translateX(0%);
+    }
+    100%{
+      transform:  translateX(100%);
+    }
+  }
+
+
+  h1{
+    font-weight:normal;
+    margin  : 10px auto 30px  0;
+  }
+
+
+  ul {
+  	width: 300px;
+  	margin: 0;
+  	padding: 0;
+  	list-style-type: none;
+  	background-color: #eeeeee;
+  }
+  li a {
+  	display: block;
+  	padding: 40px 16px;
+  	text-decoration: none;
+  	color: #000000;
+  }
+  li {
+    font-family: potta-one,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:24;
+  	text-align: center;
+  }
+  li:last-child {
+  	border-bottom: none;
+  }
+  li a.active {
+  	color: #ffffff;
+  	background-color: #da3c41;
+  }
+  li a:hover:not(.active) {
+  	color: #ffffff;
+  	background-color: #1b2538;
+  }
+
+  html{
+    background-image  : url("Background.png");
+    background-position  : center;
+    background-size : cover;
+  }
+</style>
+
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="loading.js"></script>
+  <!-- ローディング画面 -->
+  <div id="loading-wrapper">
+    <img src="loading.gif" width="400" autoplay></img>
+  </div>
+
+  <!-- コンテンツ部分 -->
+  <div id="page">
+    <h1><font face="potta-one,sans-serif" weight="400" size="40" color= "000000">合体将棋(仮)</font></h1>
+    <ul>
+	     <li><a class="active" href="">Home</a></li>
+       <!-- この下にURLとかいれてくれ！ -->
+	     <li><a href="../local_game/game.html">ローカル対戦</a></li>
+	     <li><a href="">インターネット対戦</a></li>
+	     <li><a href="">ルール</a></li>
+       <li><a href="">About</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

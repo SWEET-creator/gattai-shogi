@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>合体将棋</title>
+    <link rel="stylesheet" href="../HP/style.css">
+    <style>
+
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+  </head>
+
+  <body onload="init()">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../HP/loading.js"></script>
+    <!-- ローディング画面 -->
+    <div id="loading-wrapper">
+      <img src="../HP/loading.gif" width="400" autoplay></img>
+    </div>
+
+    <canvas id="myCanvas" width="960" height="640"></canvas>
+    <script src="game.js"></script>
+  </body>
+</html>
