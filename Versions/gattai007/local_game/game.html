@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>合体将棋</title>
+    <style>
+    .slide{
+        animation:  animationZoom1 2.5s;
+    }
+    .completed {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #loading-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #CCC5C1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    z-index: 9999;
+    }
+
+    @keyframes animationZoom1 {
+      0% {
+        transform: translateX(0%);
+      }
+      100%{
+        transform:  translateX(100%);
+      }
+    }
+
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+  </head>
+
+  <body onload="init()">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../HP/loading.js"></script>
+    <!-- ローディング画面 -->
+    <div id="loading-wrapper">
+      <img src="../HP/loading.gif" width="400" autoplay></img>
+    </div>
+
+    <canvas id="myCanvas" width="960" height="640"></canvas>
+    <script src="game.js"></script>
+  </body>
+</html>

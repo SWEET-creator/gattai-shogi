@@ -1,0 +1,35 @@
+input[type="submit"]{
+    font-size:x-large;
+    background-color:  rgb(209, 136, 80);    /* 背景色指定 */
+    text-align:  center;        /* 中央寄せ */
+    color:#EAE2B7;
+}
+input[type="text"]{
+    font-size:x-large;
+    text-align:  center;        /* 中央寄せ */
+    background-color:  rgb(209, 136, 80);    /* 背景色指定 */
+    
+}
+p{
+    color:#EAE2B7;
+}
+form {
+    width: fit-content;
+    margin: auto;
+    font-size:x-large;
+    padding: 40px 10px 10px 30px;
+}
+
+div {
+    font-size:x-large;
+    text-align:  center;
+    padding: 10px 10px 50px 30px;
+    color:#EAE2B7;
+}
+
+body {
+    background-image:url("message_box.png");
+    background-position  : center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
