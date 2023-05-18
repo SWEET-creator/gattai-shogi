@@ -1,0 +1,54 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>loading</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!--フォントをcssに書きたい（できなかった）-->
+  <script src="adobefont.js"></script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'oef0vxd',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+<style>
+html{
+  background-image  : url("Background.png");
+  background-position  : center;
+  background-size : cover;
+}
+</style>
+</head>
+
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="loading.js"></script>
+  <!-- ローディング画面 -->
+  <div id="loading-wrapper">
+    <img src="loading.gif" width="400" autoplay></img>
+  </div>
+
+  <!-- コンテンツ部分 -->
+  <div id="page">
+    <h1>合体将棋(仮)</h1>
+    <ul>
+	     <!--<li><a class="active" href="">Home</a></li>-->
+       <!-- この下にURLとかいれてくれ！ -->
+	     <li><a class="active" href="../local_game/game.html">コンピュータ対戦</a></li>
+	     <li><a href="../Internet_game/waiting_room.php">インターネット対戦</a></li>
+	     <li><a href="">ルール</a></li>
+       <li><a href="">About</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
